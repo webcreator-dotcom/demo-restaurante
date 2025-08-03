@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burger's Hot - Hamburguesas Gourmet</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Estilos personalizados y fuentes */
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        h1, h2, h3, h4, .font-anton {
+            font-family: 'Anton', sans-serif;
+        }
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1571091718767-18b5b1457add?q=80&w=1920&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+
+    <!-- SECCIÓN HEADER Y HERO -->
+    <header class="hero-bg shadow-lg">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-4xl font-anton text-yellow-400 tracking-wider">BURGER'S HOT</a>
+            <div class="hidden md:flex space-x-6 items-center">
+                <a href="#menu" class="text-lg hover:text-yellow-400 transition duration-300">Carta</a>
+                <a href="#nosotros" class="text-lg hover:text-yellow-400 transition duration-300">Nosotros</a>
+                <a href="#contacto" class="text-lg hover:text-yellow-400 transition duration-300">Contacto</a>
+            </div>
+            <!-- Botón del menú móvil -->
+            <div class="md:hidden">
+                <button id="menu-btn" class="text-white focus:outline-none">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </nav>
+        <!-- Menú desplegable móvil -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-900 bg-opacity-95">
+            <a href="#menu" class="block text-center py-3 px-4 text-base hover:bg-yellow-400 hover:text-gray-900 transition duration-300">Carta</a>
+            <a href="#nosotros" class="block text-center py-3 px-4 text-base hover:bg-yellow-400 hover:text-gray-900 transition duration-300">Nosotros</a>
+            <a href="#contacto" class="block text-center py-3 px-4 text-base hover:bg-yellow-400 hover:text-gray-900 transition duration-300">Contacto</a>
+        </div>
+        <div class="container mx-auto px-6 py-24 text-center">
+            <h1 class="text-5xl md:text-7xl text-white font-anton uppercase tracking-wider leading-tight">LA PERFECCIÓN<br>ENTRE DOS PANES</h1>
+            <p class="mt-4 text-lg md:text-xl text-gray-200 max-w-2xl mx-auto">Ingredientes frescos, carne de primera y recetas únicas. La hamburguesa que te mereces está aquí.</p>
+            <a href="#menu" class="mt-8 inline-block bg-yellow-400 text-gray-900 font-bold uppercase py-4 px-8 rounded-lg hover:bg-yellow-500 transition duration-300 transform hover:scale-105">Ver la Carta</a>
+        </div>
+    </header>
+
+    <!-- SECCIÓN CARTA - NUEVO DISEÑO -->
+    <main id="menu" class="py-20 bg-gray-900">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-anton text-center text-yellow-400 uppercase mb-16">Nuestra Carta</h2>
+    
+            <!-- Categoría: Nuestras Clásicas -->
+            <div class="mb-16">
+                <h3 class="text-3xl font-anton text-white mb-8 border-b-2 border-yellow-400 pb-2 inline-block">Nuestras Clásicas</h3>
+                <div class="space-y-8">
+                    <!-- Item 1: Hot Clásica -->
+                    <div class="flex flex-col sm:flex-row items-center gap-6 bg-gray-800 p-4 rounded-lg shadow-lg hover:shadow-yellow-400/20 transition-shadow duration-300">
+                        <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?q=80&w=600&auto=format&fit=crop" alt="Foto de la Hamburguesa Hot Clásica" class="w-full sm:w-40 h-40 object-cover rounded-md flex-shrink-0" onerror="this.onerror=null;this.src='https://placehold.co/160/444444/FFFFFF?text=Clásica';">
+                        <div class="flex-1 text-center sm:text-left">
+                            <div class="flex justify-between items-baseline">
+                                <h4 class="text-2xl font-anton text-yellow-400">Hot Clásica</h4>
+                                <p class="text-xl font-anton text-white ml-4">9,50 €</p>
+                            </div>
+                            <p class="mt-2 text-gray-300">Carne de ternera, lechuga, tomate, cebolla morada y nuestra salsa secreta de la casa.</p>
+                        </div>
+                    </div>
+                    <!-- Item 2: Bacon Cheese -->
+                    <div class="flex flex-col sm:flex-row items-center gap-6 bg-gray-800 p-4 rounded-lg shadow-lg hover:shadow-yellow-400/20 transition-shadow duration-300">
+                        <img src="https://images.unsplash.com/photo-1607013251379-e6eecfffe234?q=80&w=600&auto=format&fit=crop" alt="Foto de la Hamburguesa Bacon Cheese" class="w-full sm:w-40 h-40 object-cover rounded-md flex-shrink-0" onerror="this.onerror=null;this.src='https://placehold.co/160/555555/FFFFFF?text=Bacon';">
+                        <div class="flex-1 text-center sm:text-left">
+                            <div class="flex justify-between items-baseline">
+                                <h4 class="text-2xl font-anton text-yellow-400">Bacon Cheese</h4>
+                                <p class="text-xl font-anton text-white ml-4">11,00 €</p>
+                            </div>
+                            <p class="mt-2 text-gray-300">Doble de bacon crujiente, queso cheddar fundido, carne de ternera y salsa barbacoa ahumada.</p>
+                        </div>
+                    </div>
+                     <!-- Item 3: Pollo Crunch -->
+                    <div class="flex flex-col sm:flex-row items-center gap-6 bg-gray-800 p-4 rounded-lg shadow-lg hover:shadow-yellow-400/20 transition-shadow duration-300">
+                        <img src="https://images.unsplash.com/photo-1562967914-608f82629710?q=80&w=600&auto=format&fit=crop" alt="Foto de la Hamburguesa Pollo Crunch" class="w-full sm:w-40 h-40 object-cover rounded-md flex-shrink-0" onerror="this.onerror=null;this.src='https://placehold.co/160/484848/FFFFFF?text=Pollo';">
+                        <div class="flex-1 text-center sm:text-left">
+                            <div class="flex justify-between items-baseline">
+                                <h4 class="text-2xl font-anton text-yellow-400">Pollo Crunch</h4>
+                                <p class="text-xl font-anton text-white ml-4">10,50 €</p>
+                            </div>
+                            <p class="mt-2 text-gray-300">Pechuga de pollo empanada extra crujiente, mayonesa de kimchi y ensalada de col asiática.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Categoría: Creaciones Especiales -->
+            <div>
+                <h3 class="text-3xl font-anton text-white mb-8 border-b-2 border-yellow-400 pb-2 inline-block">Creaciones Especiales</h3>
+                <div class="space-y-8">
+                    <!-- Item 4: La Cabrita -->
+                    <div class="flex flex-col sm:flex-row items-center gap-6 bg-gray-800 p-4 rounded-lg shadow-lg hover:shadow-yellow-400/20 transition-shadow duration-300">
+                        <img src="https://images.unsplash.com/photo-1572802419224-296b0aeee0d9?q=80&w=600&auto=format&fit=crop" alt="Foto de la Hamburguesa La Cabrita" class="w-full sm:w-40 h-40 object-cover rounded-md flex-shrink-0" onerror="this.onerror=null;this.src='https://placehold.co/160/666666/FFFFFF?text=Cabrita';">
+                        <div class="flex-1 text-center sm:text-left">
+                            <div class="flex justify-between items-baseline">
+                                <h4 class="text-2xl font-anton text-yellow-400">La Cabrita</h4>
+                                <p class="text-xl font-anton text-white ml-4">12,50 €</p>
+                            </div>
+                            <p class="mt-2 text-gray-300">Queso de cabra a la plancha, cebolla caramelizada, rúcula y carne de ternera.</p>
+                        </div>
+                    </div>
+                    <!-- Item 5: Veggie Delight -->
+                    <div class="flex flex-col sm:flex-row items-center gap-6 bg-gray-800 p-4 rounded-lg shadow-lg hover:shadow-yellow-400/20 transition-shadow duration-300">
+                        <img src="https://images.unsplash.com/photo-1512152272829-e3139592d56f?q=80&w=600&auto=format&fit=crop" alt="Foto de la Hamburguesa Veggie Delight" class="w-full sm:w-40 h-40 object-cover rounded-md flex-shrink-0" onerror="this.onerror=null;this.src='https://placehold.co/160/585858/FFFFFF?text=Veggie';">
+                        <div class="flex-1 text-center sm:text-left">
+                            <div class="flex justify-between items-baseline">
+                                <h4 class="text-2xl font-anton text-yellow-400">Veggie Delight</h4>
+                                <p class="text-xl font-anton text-white ml-4">11,50 €</p>
+                            </div>
+                            <p class="mt-2 text-gray-300">Hamburguesa de champiñones y garbanzos, aguacate, brotes tiernos y alioli vegano.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- SECCIÓN NOSOTROS -->
+    <section id="nosotros" class="bg-gray-800 py-20">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
+            <div class="md:w-1/2">
+                <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=600&auto=format&fit=crop" alt="Interior acogedor del restaurante Burger's Hot" class="rounded-lg shadow-xl w-full" onerror="this.onerror=null;this.src='https://placehold.co/600x400/333333/FFFFFF?text=Nuestro+Local';">
+            </div>
+            <div class="md:w-1/2 text-center md:text-left">
+                <h2 class="text-4xl font-anton text-yellow-400 uppercase mb-4">Pasión por las Burgers</h2>
+                <p class="text-gray-300 leading-relaxed text-lg">
+                    En Burger's Hot, no solo hacemos hamburguesas, creamos experiencias. Nacimos de la idea de que una hamburguesa puede ser una obra de arte culinaria. Seleccionamos las mejores carnes, el pan más tierno y los ingredientes más frescos para que cada bocado sea inolvidable. Nuestro secreto no es solo la receta, es la pasión que ponemos en cada parrilla.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN CONTACTO -->
+    <section id="contacto" class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-anton text-center text-yellow-400 uppercase mb-12">Encuéntranos y Pide</h2>
+            <div class="bg-gray-800 rounded-lg shadow-xl p-8 flex flex-col lg:flex-row gap-8">
+                <!-- Columna de Información -->
+                <div class="lg:w-1/2">
+                    <h3 class="text-2xl font-anton text-white mb-6">Información de Contacto</h3>
+                    <div class="space-y-4 text-gray-300 text-lg">
+                        <p><strong>Dirección:</strong> Calle de la Hamburguesa, 123, 28080 Madrid</p>
+                        <p><strong>Teléfono:</strong> <a href="tel:+34912345678" class="text-yellow-400 hover:text-yellow-300 transition-colors">+34 912 345 678</a></p>
+                        <p><strong>Email:</strong> <a href="mailto:contacto@burgershot.es" class="text-yellow-400 hover:text-yellow-300 transition-colors">contacto@burgershot.es</a></p>
+                    </div>
+                    
+                    <h3 class="text-2xl font-anton text-white mt-8 mb-4">Horario</h3>
+                    <div class="space-y-2 text-gray-300 text-lg">
+                        <p><strong>Lunes a Jueves:</strong> 13:00 - 16:00 y 20:00 - 23:00</p>
+                        <p><strong>Viernes a Domingo:</strong> 13:00 - 24:00 (Cocina ininterrumpida)</p>
+                    </div>
+
+                    <h3 class="text-2xl font-anton text-white mt-8 mb-4">Síguenos</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" aria-label="Facebook" class="text-yellow-400 hover:text-white transition-transform transform hover:scale-110">
+                           <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" /></svg>
+                        </a>
+                        <a href="#" aria-label="Instagram" class="text-yellow-400 hover:text-white transition-transform transform hover:scale-110">
+                            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 012.752 2.752c.247.636.416 1.363.465 2.427.048 1.024.06 1.378.06 3.808s-.012 2.784-.06 3.808c-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-2.752-2.752c-.636.247-1.363.416-2.427.465-1.024.048-1.378.06-3.808.06s-2.784-.013-3.808-.06c-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-2.752-2.752c-.247-.636-.416-1.363-.465-2.427-.048-1.024-.06-1.378-.06-3.808s.012-2.784.06-3.808c.049-1.064.218-1.791.465-2.427a4.902 4.902 0 012.752-2.752c.636-.247 1.363.416 2.427.465C9.53 2.013 9.884 2 12.315 2zM12 7.177a4.823 4.823 0 100 9.646 4.823 4.823 0 000-9.646zm0 7.746a2.923 2.923 0 110-5.846 2.923 2.923 0 010 5.846zM18.23 6.11a1.423 1.423 0 100-2.846 1.423 1.423 0 000 2.846z" clip-rule="evenodd" /></svg>
+                        </a>
+                    </div>
+                </div>
+                <!-- Columna del Mapa -->
+                <div class="lg:w-1/2 h-80 lg:h-auto rounded-lg overflow-hidden shadow-inner">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3037.649938337581!2d-3.70379018459695!3d40.41677537936511!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd42288a3a9b3a5d%3A0x7e4b045a343a45a3!2sPuerta%20del%20Sol%2C%20Madrid!5e0!3m2!1ses!2ses!4v1678886553321!5m2!1ses!2ses" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Mapa de ubicación de Burger's Hot">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-800 border-t border-gray-700 py-6">
+        <div class="container mx-auto px-6 text-center text-gray-400">
+            <p>&copy; 2025 Burger's Hot. Todos los derechos reservados.</p>
+            <p class="text-sm mt-1">Diseño web por [Tu Nombre o Marca]</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuBtn = document.getElementById('menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            // Toggle para el menú móvil
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Scroll suave para los enlaces ancla y cierre del menú móvil
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+
+                    // Cierra el menú móvil al hacer clic en un enlace
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
